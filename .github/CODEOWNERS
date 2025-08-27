@@ -1,0 +1,23 @@
+# Code Owners for HNU Official Website
+# This file specifies who is responsible for different parts of the codebase
+
+# Global ownership - you own everything
+* @mahmoud-zel-din
+
+# Specific file ownership (optional)
+/app/ @mahmoud-zel-din
+/components/ @mahmoud-zel-din
+/contexts/ @mahmoud-zel-din
+/lib/ @mahmoud-zel-din
+/scripts/ @mahmoud-zel-din
+/public/ @mahmoud-zel-din
+
+# Configuration files
+*.json @mahmoud-zel-din
+*.ts @mahmoud-zel-din
+*.tsx @mahmoud-zel-din
+*.js @mahmoud-zel-din
+*.jsx @mahmoud-zel-din
+*.md @mahmoud-zel-din
+*.yml @mahmoud-zel-din
+*.yaml @mahmoud-zel-din

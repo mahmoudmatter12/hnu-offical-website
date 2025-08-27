@@ -1,0 +1,62 @@
+name: Branch Protection Rules
+
+# This file documents the branch protection rules for the repository
+# These rules are configured in GitHub Settings > Branches
+
+## Main Branch Protection
+
+### Required Status Checks
+Only one status check is required:
+
+1. **Build Application** - Simple build verification with `npm run build`
+
+### Pull Request Requirements
+- ✅ **Require a pull request before merging**
+- ✅ **Required approving reviews**: 1
+- ✅ **Dismiss stale PR approvals when new commits are pushed**
+- ✅ **Require review from code owners**
+- ✅ **Require conversation resolution before merging**
+- ✅ **Require linear history**
+
+### Restrictions
+- ❌ **Allow force pushes** (disabled)
+- ❌ **Allow deletions** (disabled)
+- ✅ **Enforce admins** (disabled - owner can bypass)
+
+## Develop Branch Protection
+
+### Required Status Checks
+The same build check applies to the develop branch:
+
+1. **Build Application**
+
+### Same PR Requirements
+All the same pull request requirements apply to the develop branch.
+
+## What This Means
+
+### For Contributors
+- ❌ **Cannot push directly** to main or develop
+- ✅ **Must create Pull Requests** for all changes
+- ✅ **Must wait for build check** to pass
+- ✅ **Must get code owner approval** (you)
+
+### For Owner (You)
+- ✅ **Can bypass restrictions** and push directly to main
+- ✅ **Build check still runs** automatically
+- ✅ **Full control** over the repository
+
+## Workflow Summary
+
+**Minimal workflow**: Only runs `npm run build`
+- ✅ **If build succeeds**: ✅ OK
+- ❌ **If build fails**: ❌ NO
+
+**No complex checks**: 
+- ❌ No formatting checks
+- ❌ No linting
+- ❌ No TypeScript checking
+- ❌ No security scanning
+- ❌ No dependency updates
+
+**Just build**: Simple, fast, and reliable
