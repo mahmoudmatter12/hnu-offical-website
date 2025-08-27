@@ -1,0 +1,105 @@
+# HNU Official Website - Makefile Quick Reference
+
+## 🚀 Quick Start Commands
+
+```bash
+make help          # Show this help message
+make install       # Install dependencies
+make dev           # Start development server
+make build         # Build the application
+make deploy        # Deploy to current branch
+```
+
+## 📋 Available Targets
+
+### Development
+- `make install` - Install dependencies
+- `make dev` - Start development server
+- `make start` - Start production server
+
+### Building
+- `make build` - Build the application
+- `make build-clean` - Clean build and rebuild
+
+### Code Quality
+- `make format` - Format code with Prettier
+- `make format-check` - Check code formatting
+- `make lint` - Run ESLint
+- `make lint-fix` - Fix ESLint issues
+- `make type-check` - Run TypeScript type checking
+- `make qa` - Run all quality checks
+
+### Deployment
+- `make deploy` - Deploy to current branch
+- `make deploy-prod` - Deploy to production (main branch)
+- `make deploy-staging` - Deploy to staging (develop branch)
+- `make deploy-ts` - Deploy using TypeScript script
+- `make deploy-full` - Full deployment pipeline
+
+### Git Operations
+- `make status` - Show git status
+- `make pull` - Pull latest changes
+- `make push` - Push changes to remote
+
+### Utilities
+- `make clean` - Clean build artifacts
+- `make check-node` - Check Node.js version
+- `make check-deps` - Check dependency status
+- `make update-deps` - Update dependencies
+
+## 🔧 Advanced Usage
+
+### Full Production Deployment
+```bash
+make deploy-prod-full
+```
+
+### Full Staging Deployment
+```bash
+make deploy-staging-full
+```
+
+### Quality Assurance + Build
+```bash
+make qa build
+```
+
+### Clean and Rebuild
+```bash
+make clean install build
+```
+
+## 📚 Examples
+
+### Daily Development Workflow
+```bash
+make pull          # Get latest changes
+make install       # Install new dependencies
+make dev           # Start development
+```
+
+### Pre-Deployment Checklist
+```bash
+make qa            # Run quality checks
+make build         # Build application
+make deploy        # Deploy to current branch
+```
+
+### Production Release
+```bash
+make deploy-prod-full  # Full production deployment
+```
+
+## 🆘 Getting Help
+
+```bash
+make help          # Show this help message
+make scripts-help  # Show available npm scripts
+```
+
+## 📝 Notes
+
+- All commands use colored output for better readability
+- The Makefile automatically handles common deployment scenarios
+- TypeScript deployment scripts are available with `-ts` suffix
+- Quality checks run automatically in full deployment pipelines

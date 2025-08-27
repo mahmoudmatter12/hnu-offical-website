@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "header": {
+    "menu": "Menu",
+    "language": "Language",
+    "university_name": "HNU University"
+  }
+}

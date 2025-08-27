@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "الرئيسية",
+    "about": "عن الجامعة",
+    "services": "الخدمات",
+    "contact": "اتصل بنا"
+  },
+  "header": {
+    "menu": "القائمة",
+    "language": "اللغة",
+    "university_name": "جامعة حنو"
+  }
+}
