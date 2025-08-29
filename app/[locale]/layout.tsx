@@ -5,13 +5,12 @@ import notFound from '../not-found';
 import { routing } from '@/i18n/routing';
 import { Providers } from '@/contexts';
 import Header2 from '@/components/header2';
-import Header from '@/components/header';
 
 export const metadata: Metadata = {
   title: 'Helwan National University',
-  description: 'Official Website of Helwan National University',
+  description: 'The official website of Helwan National University',
   icons: {
-    icon: '/uni.png',
+    icon: '/logo.png',
   },
 };
 
@@ -32,7 +31,7 @@ export default async function LocaleLayout({
     <NextIntlClientProvider locale={locale}>
       <Providers>
         <Header2 />
-        <div className='min-h-screen'>{children}</div>
+        {children}
       </Providers>
     </NextIntlClientProvider>
   );

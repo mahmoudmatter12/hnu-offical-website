@@ -5,4 +5,5 @@ export const heroSection = {
   image: '/home.jpeg',
   video: '/home.mp4',
   logo: '/logo.png',
+  noBgLogo: '/logo2.png',
 };
