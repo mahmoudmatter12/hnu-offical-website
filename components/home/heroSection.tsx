@@ -51,6 +51,7 @@ const HeroSection = ({
             autoPlay
             loop
             muted={isMuted}
+            disablePictureInPicture
             className='w-full h-full object-cover'
           />
         )}
