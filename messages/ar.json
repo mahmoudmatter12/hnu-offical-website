@@ -3,11 +3,25 @@
     "home": "الرئيسية",
     "about": "عن الجامعة",
     "services": "الخدمات",
-    "contact": "اتصل بنا"
+    "faculties_and_programs": "الكليات والبرامج",
+    "media": "وسائل الإعلام",
+    "FAQ": "الأسئلة الشائعة",
+    "contact": "تواصل معنا"
   },
   "header": {
     "menu": "القائمة",
     "language": "اللغة",
-    "university_name": "جامعة حلوان الاهلية"
+    "university_name": "جامعة حلوان الاهلية",
+    "FOLLOW US": "تابعنا",
+    "University's president": "رئيس الجامعة",
+    "About the university": "عن الجامعة",
+    "Business": "الأعمال",
+    "Law": "القانون",
+    "Engineering": "الهندسة",
+    "Computer Science & Engineering": "علوم وهندسة الحاسب",
+    "Science": "العلوم",
+    "Medicine": "الطب",
+    "Dentistry": "طب الأسنان",
+    "Applied Health Sciences Technology": "تكنولوجيا العلوم الصحية التطبيقية"
   }
 }
