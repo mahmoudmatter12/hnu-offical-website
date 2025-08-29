@@ -210,8 +210,8 @@ function Header2() {
                       <Link
                         href={item.href}
                         className={`px-4 py-3 rounded-xl transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 ${isActive(item.href)
-                            ? 'text-blue-700 font-semibold bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 shadow-sm'
-                            : 'text-gray-700 hover:text-blue-700'
+                          ? 'text-blue-700 font-semibold bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 shadow-sm'
+                          : 'text-gray-700 hover:text-blue-700'
                           }`}
                       >
                         <span
