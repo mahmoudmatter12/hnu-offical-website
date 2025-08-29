@@ -193,7 +193,8 @@ function Header2() {
                         className='w-full h-full object-cover rounded-full'
                       />
                     </div>
-                    <div className='absolute -top-1 -right-1 h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5 bg-blue-500 rounded-full border-2 border-white shadow-md animate-pulse'></div>
+                    <div className='absolute -top-3 -right-3 h-6 w-6 bg-blue-500 rounded-full border-4 border-white shadow-lg animate-bounce'></div>
+                    <div className='absolute -bottom-2 -left-2 h-4 w-4 bg-blue-950 rounded-full border-2 animate-pulse shadow-md'></div>
                   </div>
                   <div className='hidden sm:block'>
                     <h1 className='text-base sm:text-lg lg:text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-600 bg-clip-text text-transparent leading-tight'>
