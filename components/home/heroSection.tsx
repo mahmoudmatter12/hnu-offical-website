@@ -51,7 +51,6 @@ const HeroSection = ({
             autoPlay
             loop
             muted={isMuted}
-            playsInline
             className='w-full h-full object-cover'
           />
         )}
