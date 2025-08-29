@@ -4,12 +4,12 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import notFound from '../not-found';
 import { routing } from '@/i18n/routing';
 import { Providers } from '@/contexts';
+import Header2 from '@/components/header2';
 import Header from '@/components/header';
 
 export const metadata: Metadata = {
-  title: 'Ahlan Helwan National University',
-  description:
-    'Official Website of Helwan National University for Orientation days',
+  title: 'Helwan National University',
+  description: 'Official Website of Helwan National University',
   icons: {
     icon: '/uni.png',
   },
@@ -31,10 +31,8 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider locale={locale}>
       <Providers>
-        <div className='min-h-screen'>
-          <Header />
-          {children}
-        </div>
+        <Header2 />
+        <div className='min-h-screen'>{children}</div>
       </Providers>
     </NextIntlClientProvider>
   );

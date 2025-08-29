@@ -3,11 +3,26 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "contact": "Contact"
+    "faculties_and_programs": "Faculties & Programs",
+    "media": "Media",
+    "FAQ": "FAQ",
+    "contact": "Contact Us"
   },
   "header": {
     "menu": "Menu",
     "language": "Language",
-    "university_name": "HNU University"
+    "university_name": "HELWAN NATIONAL UNIVERSITY",
+    "FOLLOW US": "FOLLOW US",
+    "University's president": "University's president",
+    "About the university": "About the university",
+    "Business": "Business",
+    "Law": "Law",
+    "Engineering": "Engineering",
+    "Computer Science & Engineering": "Computer Science & Engineering",
+    "Science": "Science",
+    "Medicine": "Medicine",
+    "Dentistry": "Dentistry",
+    "Pharmacy": "Pharmacy",
+    "Applied Health Sciences Technology": "Applied Health Sciences Technology"
   }
 }
