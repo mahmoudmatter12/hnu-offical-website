@@ -1,12 +1,17 @@
-import { useTranslations } from 'next-intl';
+import HeroSection from '@/components/home/heroSection';
+import AboutSection from '@/components/home/aboutSection';
+import ProgramsSection from '@/components/home/programsSection';
+import { heroSection } from '@/data';
+import React from 'react';
 
-export default function Home() {
-  const t = useTranslations('navigation');
+function Home() {
   return (
-    <div className='max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8'>
-      <p className='text-white text-lg'>
-        Welcome to the official website of Helwan National University.
-      </p>
-    </div>
+    <>
+      <HeroSection {...heroSection} />
+      <AboutSection />
+      <ProgramsSection />
+    </>
   );
 }
+
+export default Home;
