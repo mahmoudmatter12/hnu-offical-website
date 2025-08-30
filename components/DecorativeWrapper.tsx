@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const DecorativeWrapper = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden">
       {/* Main content */}
       {children}
       
@@ -150,9 +150,6 @@ const DecorativeWrapper = ({ children }: { children: React.ReactNode }) => {
         animate={{ opacity: [0.2, 0.4, 0.2] }}
         transition={{ duration: 8, repeat: Infinity, delay: 2 }}
       />
-      
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]"></div>
     </div>
   );
 };

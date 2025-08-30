@@ -5,6 +5,7 @@ import notFound from '../not-found';
 import { routing } from '@/i18n/routing';
 import { Providers } from '@/contexts';
 import Header2 from '@/components/layout/header2';
+import DecorativeWrapper from '@/components/DecorativeWrapper';
 
 export const metadata: Metadata = {
   title: 'Helwan National University',
@@ -37,8 +38,10 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} >
           <Providers>
             <Header2 />
-            <main>
-              {children}
+            <main className='bg-white'>
+              <DecorativeWrapper>
+                {children}
+              </DecorativeWrapper>
             </main>
           </Providers>
         </NextIntlClientProvider>

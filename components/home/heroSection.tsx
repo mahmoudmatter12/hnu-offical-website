@@ -45,7 +45,7 @@ const HeroSection = ({
   return (
     <section
       id='home'
-      className='relative w-full min-h-screen flex items-center justify-center overflow-hidden'
+      className='relative w-full min-h-[calc(100vh-100px)] flex items-center justify-center overflow-hidden'
     >
       {/* Background Video/Image */}
       <div className='absolute inset-0 w-full h-full'>
