@@ -70,10 +70,11 @@ const Header = () => {
     <>
       {/* Header */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
             ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100'
             : 'bg-white/90 backdrop-blur-sm'
-          }`}
+        }`}
       >
         <div className='w-full px-6 sm:px-8 lg:px-12'>
           <div className='flex h-28 items-center justify-between'>
@@ -107,17 +108,19 @@ const Header = () => {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`group relative px-4 py-3 rounded-xl transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 flex-shrink-0 ${isActive(item.href)
+                    className={`group relative px-4 py-3 rounded-xl transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 flex-shrink-0 ${
+                      isActive(item.href)
                         ? 'text-blue-700 font-semibold bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 shadow-sm'
                         : 'text-gray-700 hover:text-blue-700'
-                      }`}
+                    }`}
                   >
                     <div className='flex items-center space-x-2'>
                       <Icon
-                        className={`h-4 w-4 transition-transform duration-300 ease-out group-hover:scale-110 ${isActive(item.href)
+                        className={`h-4 w-4 transition-transform duration-300 ease-out group-hover:scale-110 ${
+                          isActive(item.href)
                             ? 'text-blue-600'
                             : 'text-gray-500'
-                          }`}
+                        }`}
                       />
                       <span className='font-medium text-sm whitespace-nowrap'>
                         {item.label}
@@ -163,7 +166,10 @@ const Header = () => {
                     <Menu className='h-6 w-6 text-gray-700' />
                   </Button>
                 </SheetTrigger>
-                <SheetContent side='right' className='w-full sm:w-[450px] p-0 will-change-transform transition-transform duration-300 ease-out'>
+                <SheetContent
+                  side='right'
+                  className='w-full sm:w-[450px] p-0 will-change-transform transition-transform duration-300 ease-out'
+                >
                   <div className='flex flex-col h-full'>
                     {/* Header */}
                     <SheetHeader className='px-8 py-6 border-b border-gray-100'>
@@ -192,16 +198,18 @@ const Header = () => {
                               key={item.href}
                               href={item.href}
                               onClick={() => setIsMobileMenuOpen(false)}
-                              className={`flex items-center space-x-4 p-5 rounded-2xl transition-all duration-300 ${isActive(item.href)
+                              className={`flex items-center space-x-4 p-5 rounded-2xl transition-all duration-300 ${
+                                isActive(item.href)
                                   ? 'bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 border-2 border-blue-200 shadow-sm'
                                   : 'text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:text-blue-700'
-                                }`}
+                              }`}
                             >
                               <div
-                                className={`p-3 rounded-xl transition-colors duration-300 ${isActive(item.href)
+                                className={`p-3 rounded-xl transition-colors duration-300 ${
+                                  isActive(item.href)
                                     ? 'bg-blue-100 text-blue-600'
                                     : 'bg-gray-100 text-gray-600'
-                                  }`}
+                                }`}
                               >
                                 <Icon className='h-6 w-6' />
                               </div>

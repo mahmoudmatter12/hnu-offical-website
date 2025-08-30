@@ -37,20 +37,17 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <body suppressHydrationWarning>
-        <NextIntlClientProvider locale={locale} >
+        <NextIntlClientProvider locale={locale}>
           <Providers>
             <Header2 />
             <main className='bg-white'>
-              <DecorativeWrapper>
-                {children}
-              </DecorativeWrapper>
+              <DecorativeWrapper>{children}</DecorativeWrapper>
             </main>
             <Footer />
             <DockSocialMediaLinks />
           </Providers>
         </NextIntlClientProvider>
       </body>
-
     </html>
   );
 }

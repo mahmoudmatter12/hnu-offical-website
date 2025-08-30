@@ -9,6 +9,7 @@
     "contact": "Contact Us"
   },
   "header": {
+    "date": "Sat - Thu: 8 AM - 6 PM",
     "menu": "Menu",
     "language": "Language",
     "university_name": "HELWAN NATIONAL UNIVERSITY",
@@ -18,11 +19,18 @@
     "Business": "Business",
     "Law": "Law",
     "Engineering": "Engineering",
-    "Computer Science & Engineering": "Computer Science & Engineering",
+    "Computer Science & information technology": "Computer Science & information technology",
     "Science": "Science",
     "Medicine": "Medicine",
     "Dentistry": "Dentistry",
     "Pharmacy": "Pharmacy",
     "Applied Health Sciences Technology": "Applied Health Sciences Technology"
+  },
+  "hero": {
+    "discover_all_programs": "Discover All Programs",
+    "learn_more": "Learn More"
+  },
+  "programs": {
+    "learn_more": "Learn More"
   }
 }

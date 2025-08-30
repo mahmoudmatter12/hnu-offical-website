@@ -9,6 +9,7 @@
     "contact": "تواصل معنا"
   },
   "header": {
+    "date": "السبت - الخميس: 8 صباحًا - 6 مساءً",
     "menu": "القائمة",
     "language": "اللغة",
     "university_name": "جامعة حلوان الاهلية",
@@ -18,10 +19,18 @@
     "Business": "الأعمال",
     "Law": "القانون",
     "Engineering": "الهندسة",
-    "Computer Science & Engineering": "علوم وهندسة الحاسب",
+    "Computer Science & information technology": "علوم الحاسب وتكنولوجيا المعلومات",
     "Science": "العلوم",
     "Medicine": "الطب",
     "Dentistry": "طب الأسنان",
     "Applied Health Sciences Technology": "تكنولوجيا العلوم الصحية التطبيقية"
+  },
+  "hero": {
+    "discover_all_programs": "اكتشف جميع البرامج",
+    "learn_more": "المزيد"
+  },
+
+  "programs": {
+    "learn_more": "المزيد"
   }
 }

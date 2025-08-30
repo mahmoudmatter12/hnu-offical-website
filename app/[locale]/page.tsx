@@ -2,7 +2,12 @@
 import HeroSection from '@/components/home/heroSection';
 import AboutSection from '@/components/home/aboutSection';
 import ProgramsSection from '@/components/home/programsSection';
-import { heroSection, aboutSection, programsSection, FactsAndNumbers } from '@/data';
+import {
+  heroSection,
+  aboutSection,
+  programsSection,
+  FactsAndNumbers,
+} from '@/data';
 import React from 'react';
 import { useLocale } from 'next-intl';
 import FcatsAndNumber from '@/components/home/FcatsAndNumber';
@@ -16,8 +21,8 @@ function Home() {
   return (
     <>
       <HeroSection {...heroSection} local={locale} />
-      <AboutSection {...aboutSection} />
-      <ProgramsSection {...programsSection} />
+      <AboutSection {...aboutSection} local={locale} />
+      <ProgramsSection {...programsSection} local={locale} />
       <FcatsAndNumber FactsAndNumbers={FactsAndNumbers} />
       <FAQ />
       <TopNews />

@@ -2,26 +2,54 @@ import React from 'react';
 import Reveal from '@/components/Reveal';
 
 export interface AboutSectionProps {
-  title: string;
-  subtitle?: string;
-  description: string;
-  highlights?: Array<{ title: string; description: string }>;
+  title: {
+    ar: string;
+    en: string;
+  };
+  subtitle?: {
+    ar: string;
+    en: string;
+  };
+  description: {
+    ar: string;
+    en: string;
+  };
+  highlights?: Array<{
+    title: { ar: string; en: string };
+    description: { ar: string; en: string };
+  }>;
   image?: string;
   titleClassName?: string;
   cardTitleClassName?: string;
+  local: string;
 }
 
-function AboutSection({ title, subtitle, description, highlights = [], image, cardTitleClassName }: AboutSectionProps) {
-  return (
+function AboutSection({
+  title,
+  subtitle,
+  description,
+  highlights = [],
+  image,
+  titleClassName,
+  cardTitleClassName,
+  local,
+}: AboutSectionProps) {
+    return (
     <section id='about' className='py-5'>
       <div className='container mx-auto px-4'>
         <div className='max-w-3xl mx-auto text-center mb-12'>
           <Reveal from='up'>
-            <h2 className={`text-4xl sm:text-5xl font-bold mb-4 text-[#023e8a]`}>{title}</h2>
+            <h2
+              className={`text-4xl sm:text-5xl font-bold mb-4 ${titleClassName || ''}`}
+            >
+              {local === 'ar' ? title.ar : title.en}
+            </h2>
           </Reveal>
           {subtitle && (
             <Reveal delayMs={100} from='up'>
-              <p className='text-lg text-gray-600'>{subtitle}</p>
+              <p className='text-lg text-gray-600'>
+                {local === 'ar' ? subtitle.ar : subtitle.en}
+              </p>
             </Reveal>
           )}
         </div>
@@ -29,16 +57,30 @@ function AboutSection({ title, subtitle, description, highlights = [], image, ca
         <div className='grid grid-cols-1 md:grid-cols-2 gap-10 items-center'>
           <div className='transition-all duration-300 ease-out'>
             <Reveal from='up'>
-              <p className='text-gray-700 leading-relaxed text-lg'>{description}</p>
+              <p className='text-gray-700 leading-relaxed text-lg'>
+                {local === 'ar' ? description.ar : description.en}
+              </p>
             </Reveal>
 
             {highlights.length > 0 && (
               <div className='mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6'>
                 {highlights.map((item, index) => (
-                  <Reveal key={index} delayMs={index * 80} from={index % 2 === 0 ? 'up' : 'up'}>
+                  <Reveal
+                    key={index}
+                    delayMs={index * 80}
+                    from={index % 2 === 0 ? 'up' : 'up'}
+                  >
                     <div className='p-5 rounded-lg border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 ease-out hover:-translate-y-0.5'>
-                      <h3 className={`text-xl font-semibold mb-2 ${cardTitleClassName || ''}`}>{item.title}</h3>
-                      <p className='text-gray-600'>{item.description}</p>
+                      <h3
+                        className={`text-xl font-semibold mb-2 ${cardTitleClassName || ''}`}
+                      >
+                        {local === 'ar' ? item.title.ar : item.title.en}
+                      </h3>
+                      <p className='text-gray-600'>
+                        {local === 'ar'
+                          ? item.description.ar
+                          : item.description.en}
+                      </p>
                     </div>
                   </Reveal>
                 ))}
@@ -50,7 +92,11 @@ function AboutSection({ title, subtitle, description, highlights = [], image, ca
             {image ? (
               // eslint-disable-next-line @next/next/no-img-element
               <Reveal from='up' delayMs={120}>
-                <img src={image} alt='About section image' className='w-full h-auto rounded-xl object-cover shadow-lg transition-transform duration-500 ease-out hover:scale-[1.02] will-change-transform' />
+                <img
+                  src={image}
+                  alt='About section image'
+                  className='w-full h-auto rounded-xl object-cover shadow-lg transition-transform duration-500 ease-out will-change-transform'
+                />
               </Reveal>
             ) : (
               <Reveal from='up' delayMs={120}>
