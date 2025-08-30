@@ -216,8 +216,14 @@ function Header2() {
                     <div className='absolute -bottom-2 left-2 h-4 w-4 bg-blue-950 rounded-full border-2 animate-pulse shadow-md'></div>
                   </div>
                   <div className='hidden sm:block'>
-                    <h1 className='text-base sm:text-lg lg:text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-600 bg-clip-text text-transparent leading-tight'>
+                    <h1 className='text-base sm:text-lg lg:text-xl font-bold bg-gradient-to-r from-blue-950 to-blue-700 bg-clip-text text-transparent leading-tight'>
                       {headerT('university_name')}
+                    </h1>
+                  </div>
+
+                  <div className='block sm:hidden'>
+                    <h1 className='text-sm font-bold bg-gradient-to-r from-blue-950 to-blue-700 bg-clip-text text-transparent leading-tight'>
+                      {headerT('university_name_mobile')}
                     </h1>
                   </div>
                 </div>
