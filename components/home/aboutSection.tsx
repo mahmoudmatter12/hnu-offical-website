@@ -34,8 +34,8 @@ function AboutSection({
   cardTitleClassName,
   local,
 }: AboutSectionProps) {
-  return (
-    <section id='about' className='py-20'>
+    return (
+    <section id='about' className='py-5'>
       <div className='container mx-auto px-4'>
         <div className='max-w-3xl mx-auto text-center mb-12'>
           <Reveal from='up'>
