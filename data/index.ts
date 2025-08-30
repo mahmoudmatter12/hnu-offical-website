@@ -1,5 +1,8 @@
 export const heroSection = {
-  title: 'Welcome to HNU Official Website',
+  title: {
+    ar: "اهلا بك في موقع الجامعة الحلوانية الوطنية",
+    en: "Welcome to HNU Official Website",
+  },
   description:
     'Discover excellence in education, innovation, and community. Join us in shaping the future through knowledge, research, and transformative learning experiences.',
   image: '/home.jpeg',
@@ -119,3 +122,14 @@ export const programsSection = {
     },
   ],
 };
+
+export const headerData = { 
+  tite: {
+    ar: "جامعة حلوان الاهلية",
+    en: "Helwan National University",
+  },
+  description: {
+    ar: "جامعة حلوان الاهلية",
+    en: "Helwan National University",
+  }
+}
