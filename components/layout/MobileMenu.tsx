@@ -101,10 +101,11 @@ const MobileMenu = ({
                   {item.submenu ? (
                     <>
                       <AccordionTrigger
-                        className={`p-4 rounded-2xl transition-all duration-300 hover:bg-blue-50/50 ${isActive(item.href)
+                        className={`p-4 rounded-2xl transition-all duration-300 hover:bg-blue-50/50 ${
+                          isActive(item.href)
                             ? 'bg-blue-100/70 text-blue-700 border border-blue-200'
                             : 'text-gray-700 hover:text-blue-700'
-                          }`}
+                        }`}
                       >
                         <span className='font-semibold text-lg text-left'>
                           {item.label}
@@ -131,10 +132,11 @@ const MobileMenu = ({
                     <Link
                       href={item.href}
                       onClick={onClose}
-                      className={`flex items-center justify-between p-4 rounded-2xl transition-all duration-300 ${isActive(item.href)
+                      className={`flex items-center justify-between p-4 rounded-2xl transition-all duration-300 ${
+                        isActive(item.href)
                           ? 'bg-blue-100/70 text-blue-700 border border-blue-200'
                           : 'text-gray-700 hover:bg-blue-50/50 hover:text-blue-700'
-                        }`}
+                      }`}
                     >
                       <span className='font-semibold text-lg'>
                         {item.label}

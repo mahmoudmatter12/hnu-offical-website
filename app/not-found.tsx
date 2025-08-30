@@ -1,6 +1,13 @@
 'use client';
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { Home, ArrowLeft, Building2, Mail, Phone, HelpCircle } from 'lucide-react';
+import {
+  Home,
+  ArrowLeft,
+  Building2,
+  Mail,
+  Phone,
+  HelpCircle,
+} from 'lucide-react';
 import { FaUniversity, FaGraduationCap, FaBook, FaUsers } from 'react-icons/fa';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,7 +17,7 @@ export default function NotFound() {
   const [showHelpOptions, setShowHelpOptions] = useState(false);
   const count = useMotionValue(0);
   const rounded = useTransform(count, Math.round);
-  
+
   useEffect(() => {
     const animation = animate(count, 404, { duration: 2 });
     return animation.stop;
@@ -21,31 +28,43 @@ export default function NotFound() {
     <div className='relative flex min-h-screen w-full flex-col items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 p-4 overflow-hidden'>
       {/* Animated Background with Particles */}
       <div className='absolute inset-0 bg-grid-pattern opacity-10'></div>
-      
+
       {/* Floating particles background */}
       {[...Array(30)].map((_, i) => (
         <motion.div
           key={i}
           className='absolute w-2 h-2 bg-blue-400 rounded-full opacity-20'
-          initial={{ 
-            x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-            y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1000)
+          initial={{
+            x:
+              Math.random() *
+              (typeof window !== 'undefined' ? window.innerWidth : 1000),
+            y:
+              Math.random() *
+              (typeof window !== 'undefined' ? window.innerHeight : 1000),
           }}
           animate={{
-            x: [null, Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000)],
-            y: [null, Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1000)]
+            x: [
+              null,
+              Math.random() *
+                (typeof window !== 'undefined' ? window.innerWidth : 1000),
+            ],
+            y: [
+              null,
+              Math.random() *
+                (typeof window !== 'undefined' ? window.innerHeight : 1000),
+            ],
           }}
           transition={{
             duration: Math.random() * 20 + 20,
             repeat: Infinity,
-            repeatType: "reverse"
+            repeatType: 'reverse',
           }}
         />
       ))}
-      
+
       {/* Animated gradient orbs */}
-      <motion.div 
-        className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-300 rounded-full filter blur-3xl opacity-20"
+      <motion.div
+        className='absolute top-1/4 left-1/4 w-64 h-64 bg-blue-300 rounded-full filter blur-3xl opacity-20'
         animate={{
           scale: [1, 1.2, 1],
           x: [0, 50, 0],
@@ -54,11 +73,11 @@ export default function NotFound() {
         transition={{
           duration: 15,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: 'easeInOut',
         }}
       />
-      <motion.div 
-        className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-indigo-300 rounded-full filter blur-3xl opacity-20"
+      <motion.div
+        className='absolute bottom-1/4 right-1/4 w-72 h-72 bg-indigo-300 rounded-full filter blur-3xl opacity-20'
         animate={{
           scale: [1.2, 1, 1.2],
           x: [0, -40, 0],
@@ -67,50 +86,65 @@ export default function NotFound() {
         transition={{
           duration: 18,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: 'easeInOut',
         }}
       />
 
       {/* Floating Icons with varied animations */}
       <motion.div
-        animate={{ 
+        animate={{
           y: [0, -20, 0],
-          rotate: [0, 5, 0]
+          rotate: [0, 5, 0],
         }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
         className='absolute top-32 left-1/4 text-blue-400/40'
       >
         <FaUniversity size={28} />
       </motion.div>
 
       <motion.div
-        animate={{ 
+        animate={{
           y: [0, 15, 0],
-          rotate: [0, -5, 0]
+          rotate: [0, -5, 0],
         }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 0.5,
+        }}
         className='absolute bottom-32 right-1/4 text-blue-500/40'
       >
         <FaGraduationCap size={24} />
       </motion.div>
 
       <motion.div
-        animate={{ 
+        animate={{
           y: [0, -12, 0],
-          rotate: [0, 8, 0]
+          rotate: [0, 8, 0],
         }}
-        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 1,
+        }}
         className='absolute top-1/2 left-16 text-blue-300/40'
       >
         <FaBook size={22} />
       </motion.div>
 
       <motion.div
-        animate={{ 
+        animate={{
           y: [0, 18, 0],
-          rotate: [0, -8, 0]
+          rotate: [0, -8, 0],
         }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 1.5,
+        }}
         className='absolute top-1/3 right-16 text-indigo-400/40'
       >
         <FaUsers size={26} />
@@ -121,7 +155,7 @@ export default function NotFound() {
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
+          transition={{ duration: 0.6, type: 'spring', stiffness: 100 }}
           className='mb-8'
         >
           <Image
@@ -134,11 +168,11 @@ export default function NotFound() {
         </motion.div>
 
         {/* Animated 404 Number */}
-        <motion.div 
-          className="mb-4 text-9xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent"
+        <motion.div
+          className='mb-4 text-9xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent'
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+          transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
         >
           <motion.span>{rounded}</motion.span>
         </motion.div>
@@ -162,11 +196,15 @@ export default function NotFound() {
           className='text-4xl font-bold tracking-tight text-slate-800 sm:text-5xl md:text-6xl mb-6'
         >
           Oops! Lost in the{' '}
-          <motion.span 
+          <motion.span
             className='bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent'
             animate={{ backgroundPosition: ['0%', '100%'] }}
-            transition={{ repeat: Infinity, repeatType: "reverse", duration: 3 }}
-            style={{ 
+            transition={{
+              repeat: Infinity,
+              repeatType: 'reverse',
+              duration: 3,
+            }}
+            style={{
               backgroundSize: '200% auto',
             }}
           >
@@ -181,8 +219,9 @@ export default function NotFound() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className='text-lg text-slate-600 mb-8 max-w-2xl'
         >
-          The page you&apos;re looking for seems to have wandered off. It might have been moved, 
-          deleted, or perhaps you&apos;ve entered a URL that doesn&apos;t exist in our digital university.
+          The page you&apos;re looking for seems to have wandered off. It might
+          have been moved, deleted, or perhaps you&apos;ve entered a URL that
+          doesn&apos;t exist in our digital university.
         </motion.p>
 
         {/* Action Buttons */}
@@ -203,10 +242,7 @@ export default function NotFound() {
             </motion.div>
           </Link>
 
-          <button
-            onClick={() => window.history.back()}
-            className='flex-1'
-          >
+          <button onClick={() => window.history.back()} className='flex-1'>
             <motion.div
               whileHover={{ scale: 1.03, y: -2 }}
               whileTap={{ scale: 0.98 }}
@@ -219,8 +255,8 @@ export default function NotFound() {
         </motion.div>
 
         {/* Help Section */}
-        <motion.div 
-          className="w-full max-w-md"
+        <motion.div
+          className='w-full max-w-md'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
@@ -229,26 +265,32 @@ export default function NotFound() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => setShowHelpOptions(!showHelpOptions)}
-            className="flex items-center justify-center gap-2 mx-auto text-slate-500 hover:text-blue-600 transition-colors mb-4"
+            className='flex items-center justify-center gap-2 mx-auto text-slate-500 hover:text-blue-600 transition-colors mb-4'
           >
             <HelpCircle size={18} />
             <span>Need help?</span>
           </motion.button>
-          
+
           {showHelpOptions && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="bg-white rounded-xl p-4 shadow-lg border border-slate-100"
+              className='bg-white rounded-xl p-4 shadow-lg border border-slate-100'
             >
-              <p className="text-slate-600 mb-3">Contact our support team:</p>
-              <div className="flex flex-col gap-2">
-                <a href="mailto:support@university.edu" className="flex items-center gap-2 text-blue-600 hover:text-blue-700">
+              <p className='text-slate-600 mb-3'>Contact our support team:</p>
+              <div className='flex flex-col gap-2'>
+                <a
+                  href='mailto:support@university.edu'
+                  className='flex items-center gap-2 text-blue-600 hover:text-blue-700'
+                >
                   <Mail size={16} />
                   <span>support@university.edu</span>
                 </a>
-                <a href="tel:+1234567890" className="flex items-center gap-2 text-blue-600 hover:text-blue-700">
+                <a
+                  href='tel:+1234567890'
+                  className='flex items-center gap-2 text-blue-600 hover:text-blue-700'
+                >
                   <Phone size={16} />
                   <span>+1 (234) 567-890</span>
                 </a>
@@ -258,27 +300,32 @@ export default function NotFound() {
         </motion.div>
 
         {/* Search suggestion */}
-        <motion.div 
-          className="mt-6 text-sm text-slate-500 max-w-md"
+        <motion.div
+          className='mt-6 text-sm text-slate-500 max-w-md'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
-          <p>Try using the search function or visit our <Link href="/" className="text-blue-600 hover:underline">site map</Link></p>
+          <p>
+            Try using the search function or visit our{' '}
+            <Link href='/' className='text-blue-600 hover:underline'>
+              site map
+            </Link>
+          </p>
         </motion.div>
       </div>
 
       {/* Subtle background animation */}
-      <motion.div 
-        className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-50/30 to-transparent"
+      <motion.div
+        className='absolute inset-0 bg-gradient-to-br from-transparent via-blue-50/30 to-transparent'
         animate={{
           backgroundPosition: ['0% 0%', '100% 100%'],
         }}
         transition={{
           duration: 15,
           repeat: Infinity,
-          repeatType: "reverse",
-          ease: "linear"
+          repeatType: 'reverse',
+          ease: 'linear',
         }}
       />
     </div>

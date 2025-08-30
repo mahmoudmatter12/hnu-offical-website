@@ -17,7 +17,7 @@ import {
   FaTiktok,
   FaInstagram,
 } from 'react-icons/fa';
-import MobileMenu from './MobileMenu';
+import MobileMenu from './layout/MobileMenu';
 
 function Header2() {
   const t = useTranslations('navigation');
@@ -203,7 +203,7 @@ function Header2() {
                 {/* Logo and University Name */}
                 <div className='flex items-center space-x-3 sm:space-x-4 lg:space-x-6 flex-shrink-0'>
                   <div className='relative'>
-                    <div className='h-12 w-12 ml-6 sm:h-16 sm:w-16 lg:h-20 lg:w-20 rounded-full flex items-center justify-center border-2 border-white bg-white overflow-hidden'>
+                    <div className='h-12 w-12 ml-6 sm:h-16 sm:w-16 lg:h-20 lg:w-20 rounded-full flex items-center justify-center shadow-xl border-2 border-white bg-white overflow-hidden'>
                       <Image
                         src='/logo2.png'
                         alt='HNU Logo'
