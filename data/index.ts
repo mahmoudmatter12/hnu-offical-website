@@ -133,3 +133,14 @@ export const headerData = {
     en: "Helwan National University",
   }
 }
+
+export const socialMediaLinks = {
+  facebook: 'https://www.facebook.com/helwanuniversity',
+  linkedin: 'https://www.linkedin.com/school/helwan-national-university/',
+  instagram: 'https://www.instagram.com/helwanuniversity/',
+  twitter: 'https://twitter.com/helwanuniversity',
+  youtube: 'https://www.youtube.com/channel/UCXH4IPJ554hPMJg0MEY4iMA',
+  tiktok: 'https://www.tiktok.com/@helwanuniversity',
+  telegram: 'https://t.me/helwanuniversity',
+  whatsapp: '',
+}
