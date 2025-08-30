@@ -11,13 +11,13 @@ export interface AboutSectionProps {
   cardTitleClassName?: string;
 }
 
-function AboutSection({ title, subtitle, description, highlights = [], image, titleClassName, cardTitleClassName }: AboutSectionProps) {
+function AboutSection({ title, subtitle, description, highlights = [], image, cardTitleClassName }: AboutSectionProps) {
   return (
-    <section id='about' className='py-20'>
+    <section id='about' className='py-5'>
       <div className='container mx-auto px-4'>
         <div className='max-w-3xl mx-auto text-center mb-12'>
           <Reveal from='up'>
-            <h2 className={`text-4xl sm:text-5xl font-bold mb-4 ${titleClassName || ''}`}>{title}</h2>
+            <h2 className={`text-4xl sm:text-5xl font-bold mb-4 text-[#023e8a]`}>{title}</h2>
           </Reveal>
           {subtitle && (
             <Reveal delayMs={100} from='up'>

@@ -72,7 +72,7 @@ function FcatsAndNumber({ FactsAndNumbers }: { FactsAndNumbers: StatItem[] }) {
     }, [isVisible])
 
     return (
-        <section id="facts-section" className="py-20">
+        <section id="facts-section" className="py-5">
             <div className="container mx-auto px-4">
                 {/* Header Section */}
                 <div className="text-center mb-16">
