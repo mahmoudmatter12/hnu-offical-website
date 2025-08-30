@@ -1,6 +1,15 @@
 'use client';
 import Image from 'next/image';
 import React, { useState, useRef } from 'react';
+import { socialMediaLinks } from '@/data';
+import {
+  Facebook,
+  Linkedin,
+  Instagram,
+  Twitter,
+  Youtube,
+} from 'lucide-react';
+import { FaTelegram, FaTiktok } from 'react-icons/fa';
 
 export interface HeroSectionProps {
   title: {
@@ -11,7 +20,7 @@ export interface HeroSectionProps {
   video: string;
   logo: string;
   image?: string;
-  local:string;
+  local: string;
 }
 
 const HeroSection = ({
@@ -24,6 +33,18 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const { facebook, linkedin, instagram, twitter, youtube, tiktok, telegram } = socialMediaLinks;
+
+  const socialLinks = [
+    { name: 'Facebook', url: facebook, icon: Facebook, color: 'hover:bg-blue-600' },
+    { name: 'LinkedIn', url: linkedin, icon: Linkedin, color: 'hover:bg-blue-700' },
+    { name: 'Instagram', url: instagram, icon: Instagram, color: 'hover:bg-pink-600' },
+    { name: 'Twitter', url: twitter, icon: Twitter, color: 'hover:bg-blue-400' },
+    { name: 'YouTube', url: youtube, icon: Youtube, color: 'hover:bg-red-600' },
+    { name: 'TikTok', url: tiktok, icon: FaTiktok, color: 'hover:bg-black' },
+    { name: 'Telegram', url: telegram, icon: FaTelegram, color: 'hover:bg-blue-500' },
+  ].filter(link => link.url);
+
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !isMuted;
@@ -127,7 +148,7 @@ const HeroSection = ({
         </p>
 
         {/* Call to Action Buttons */}
-        <div className='flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animation-delay-400'>
+        <div className='flex mb-30 flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animation-delay-400'>
           <button
             onClick={() => scrollToSection('programs')}
             className='px-8 py-4 bg-white text-[#023e8a] font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl'
@@ -141,7 +162,53 @@ const HeroSection = ({
             Learn More
           </button>
         </div>
+
+        {/* Floating Social Media Icons Row */}
+        <div className='absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20'>
+          <div className='flex gap-3'>
+            {socialLinks.map((link, index) => {
+              const IconComponent = link.icon;
+              return (
+                <a
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`
+                  group relative flex items-center justify-center w-12 h-12 
+                  bg-white/90 backdrop-blur-sm rounded-full shadow-lg 
+                  border border-white/50 transition-all duration-300 
+                  ${link.color} hover:scale-110 hover:shadow-xl
+                  transform hover:-translate-y-1
+                `}
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                    animation: 'fadeInUp 0.6s ease-out forwards'
+                  }}
+                  title={link.name}
+                >
+                  {/* Icon */}
+                  <IconComponent
+                    className="w-5 h-5 text-gray-700 transition-all duration-300 
+                             group-hover:text-white group-hover:scale-125"
+                  />
+
+                  {/* Tooltip */}
+                  <div className="absolute bottom-full mb-3 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg 
+                              opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none
+                              whitespace-nowrap shadow-lg">
+                    {link.name}
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 
+                                border-l-4 border-l-transparent border-r-4 border-r-transparent border-t-4 border-t-gray-900">
+                    </div>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </div>
       </div>
+
 
       {/* Decorative Elements */}
       <div className='absolute top-20 left-10 w-20 h-20 border border-white/20 rounded-full animate-ping'></div>

@@ -8,10 +8,9 @@ import {
     Instagram,
     Twitter,
     Youtube,
-    Music,
-    MessageCircle,
     Share2
 } from 'lucide-react';
+import { FaTelegram, FaTiktok } from 'react-icons/fa';
 
 function DockSocialMediaLinks() {
     const [isOpen, setIsOpen] = useState(false);
@@ -25,8 +24,8 @@ function DockSocialMediaLinks() {
         { name: 'Instagram', url: instagram, icon: Instagram, color: 'hover:bg-pink-600' },
         { name: 'Twitter', url: twitter, icon: Twitter, color: 'hover:bg-blue-400' },
         { name: 'YouTube', url: youtube, icon: Youtube, color: 'hover:bg-red-600' },
-        { name: 'TikTok', url: tiktok, icon: Music, color: 'hover:bg-black' },
-        { name: 'Telegram', url: telegram, icon: MessageCircle, color: 'hover:bg-blue-500' },
+        { name: 'TikTok', url: tiktok, icon: FaTiktok, color: 'hover:bg-black' },
+        { name: 'Telegram', url: telegram, icon: FaTelegram, color: 'hover:bg-blue-500' },
     ].filter(link => link.url); // Only show links that have URLs
 
     const toggleDock = () => {
