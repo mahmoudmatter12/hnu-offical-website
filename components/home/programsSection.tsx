@@ -81,7 +81,7 @@ function ProgramsSection({
             <Reveal key={program.id} delayMs={index * 80} from='up'>
               <article
                 tabIndex={0}
-                className='group relative bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl active:shadow-xl focus-within:shadow-xl transition-all overflow-hidden hover:-translate-y-1 active:-translate-y-1 focus-within:-translate-y-1 ring-1 ring-transparent hover:ring-[#023e8a]/40 focus-within:ring-[#023e8a]/40'
+                className='group relative bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl active:shadow-xl focus-within:shadow-xl transition-all overflow-hidden hover:-translate-y-1 active:-translate-y-1 focus-within:-translate-y-1 ring-1 ring-transparent hover:ring-[#023e8a]/40 focus-within:ring-[#023e8a]/40 h-full flex flex-col'
               >
                 <div className='relative overflow-hidden h-44'>
                   {program.image && (
@@ -114,20 +114,20 @@ function ProgramsSection({
                   </div>
                 </div>
 
-                <div className='p-5'>
+                <div className='p-5 flex-1 flex flex-col'>
                   <h3
                     className={`text-xl font-semibold mb-2 ${cardTitleClassName || ''}`}
                   >
                     {local === 'ar' ? program.title.ar : program.title.en}
                   </h3>
-                  <p className='text-gray-600 mb-4 line-clamp-3'>
+                  <p className='text-gray-600 mb-4 line-clamp-3 flex-1 min-h-[4.5rem]'>
                     {local === 'ar'
                       ? program.description.ar
                       : program.description.en}
                   </p>
                   <div className='h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-4'></div>
 
-                  <div className='flex items-center justify-between text-sm text-gray-500'>
+                  <div className='flex items-center justify-between text-sm text-gray-500 mt-auto'>
                     <div className='flex items-center gap-2'>
                       {program.degree && (
                         <span className='px-2 py-0.5 rounded-full bg-[#023e8a]/5 text-[#023e8a] ring-1 ring-[#023e8a]/20'>
