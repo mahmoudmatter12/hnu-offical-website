@@ -7,6 +7,7 @@ import { Providers } from '@/contexts';
 import Header2 from '@/components/layout/header2';
 import DecorativeWrapper from '@/components/DecorativeWrapper';
 import DockSocialMediaLinks from '@/components/layout/dockSocialMediaLinks';
+import Footer from '@/components/layout/footer';
 
 export const metadata: Metadata = {
   title: 'Helwan National University',
@@ -44,6 +45,7 @@ export default async function LocaleLayout({
                 {children}
               </DecorativeWrapper>
             </main>
+            <Footer />
             <DockSocialMediaLinks />
           </Providers>
         </NextIntlClientProvider>

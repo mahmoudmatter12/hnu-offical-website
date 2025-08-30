@@ -1,7 +1,7 @@
 export const heroSection = {
   title: {
-    ar: "اهلا بك في موقع الجامعة الحلوانية الوطنية",
-    en: "Welcome to HNU Official Website",
+    ar: 'اهلا بك في موقع الجامعة الحلوانية الوطنية',
+    en: 'Welcome to HNU Official Website',
   },
   description:
     'Discover excellence in education, innovation, and community. Join us in shaping the future through knowledge, research, and transformative learning experiences.',
@@ -123,16 +123,16 @@ export const programsSection = {
   ],
 };
 
-export const headerData = { 
+export const headerData = {
   tite: {
-    ar: "جامعة حلوان الاهلية",
-    en: "Helwan National University",
+    ar: 'جامعة حلوان الاهلية',
+    en: 'Helwan National University',
   },
   description: {
-    ar: "جامعة حلوان الاهلية",
-    en: "Helwan National University",
-  }
-}
+    ar: 'جامعة حلوان الاهلية',
+    en: 'Helwan National University',
+  },
+};
 
 export const socialMediaLinks = {
   facebook: 'https://www.facebook.com/helwanuniversity',
@@ -143,4 +143,70 @@ export const socialMediaLinks = {
   tiktok: 'https://www.tiktok.com/@helwanuniversity',
   telegram: 'https://t.me/helwanuniversity',
   whatsapp: '',
-}
+};
+
+export const FactsAndNumbers = [
+  {
+    id: 1,
+    icon: 'Users',
+    number: 15000,
+    label: 'Students',
+    description: 'Enrolled students across all programs',
+    color: 'from-blue-500 to-blue-600',
+  },
+  {
+    id: 2,
+    icon: 'GraduationCap',
+    number: 250,
+    label: 'Programs',
+    description: 'Academic programs and specializations',
+    color: 'from-green-500 to-green-600',
+  },
+  {
+    id: 3,
+    icon: 'Globe',
+    number: 85,
+    label: 'Countries',
+    description: 'Students from around the world',
+    color: 'from-purple-500 to-purple-600',
+  },
+];
+
+export const footerData = {
+  navigation: {
+    title: 'Quick Links',
+    links: [
+      { name: 'Home', href: '#home' },
+      { name: 'About Us', href: '#about' },
+      { name: 'Programs', href: '#programs' },
+      { name: 'Admissions', href: '#admissions' },
+      { name: 'Research', href: '#research' },
+      { name: 'Campus Life', href: '#campus-life' },
+      { name: 'Contact', href: '#contact' },
+      { name: 'News & Events', href: '#news' },
+    ],
+  },
+  contact: {
+    title: 'Contact Information',
+    address: 'Helwan, Cairo Governorate, Egypt',
+    phone: '+20 2 2555 1234',
+    email: 'info@hnu.edu.eg',
+    workingHours: 'Sunday - Thursday: 8:00 AM - 4:00 PM',
+    emergency: '+20 2 2555 9999',
+  },
+  location: {
+    title: 'Our Location',
+    coordinates: {
+      lat: 29.8419,
+      lng: 31.3345,
+    },
+    mapUrl: 'https://maps.app.goo.gl/WWM1Y1kEqo6xbhsx7?g_st=ipc',
+    description:
+      'Located in the heart of Helwan, our campus offers easy access to transportation and amenities.',
+  },
+  development: {
+    team: 'Development Team',
+    credits: 'Designed & Developed by HNU Development Team',
+    year: new Date().getFullYear(),
+  },
+};

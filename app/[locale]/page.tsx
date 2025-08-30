@@ -2,9 +2,10 @@
 import HeroSection from '@/components/home/heroSection';
 import AboutSection from '@/components/home/aboutSection';
 import ProgramsSection from '@/components/home/programsSection';
-import { heroSection, aboutSection, programsSection } from '@/data';
+import { heroSection, aboutSection, programsSection, FactsAndNumbers } from '@/data';
 import React from 'react';
 import { useLocale } from 'next-intl';
+import FcatsAndNumber from '@/components/home/FcatsAndNumber';
 
 function Home() {
   const locale = useLocale(); // route ar or en based on the url
@@ -13,6 +14,7 @@ function Home() {
       <HeroSection {...heroSection} local={locale} />
       <AboutSection {...aboutSection} />
       <ProgramsSection {...programsSection} />
+      <FcatsAndNumber FactsAndNumbers={FactsAndNumbers} />
     </>
   );
 }
