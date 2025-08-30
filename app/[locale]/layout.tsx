@@ -4,13 +4,13 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import notFound from '../not-found';
 import { routing } from '@/i18n/routing';
 import { Providers } from '@/contexts';
-import Header2 from '@/components/header2';
+import Header2 from '@/components/layout/header2';
 
 export const metadata: Metadata = {
   title: 'Helwan National University',
   description: 'The official website of Helwan National University',
   icons: {
-    icon: '/logo.png',
+    icon: '/home.jpeg',
   },
 };
 
@@ -28,11 +28,22 @@ export default async function LocaleLayout({
   }
 
   return (
-    <NextIntlClientProvider locale={locale}>
-      <Providers>
-        <Header2 />
-        {children}
-      </Providers>
-    </NextIntlClientProvider>
+    <html
+      lang={locale}
+      dir={locale === 'ar' ? 'rtl' : 'ltr'}
+      suppressHydrationWarning
+    >
+      <body suppressHydrationWarning>
+        <NextIntlClientProvider locale={locale} >
+          <Providers>
+            <Header2 />
+            <main>
+              {children}
+            </main>
+          </Providers>
+        </NextIntlClientProvider>
+      </body>
+
+    </html>
   );
 }

@@ -3,11 +3,15 @@ import Image from 'next/image';
 import React, { useState, useRef } from 'react';
 
 export interface HeroSectionProps {
-  title: string;
+  title: {
+    ar: string;
+    en: string;
+  };
   description: string;
   video: string;
   logo: string;
   image?: string;
+  local:string;
 }
 
 const HeroSection = ({
@@ -16,6 +20,7 @@ const HeroSection = ({
   video,
   logo,
   image,
+  local,
 }: HeroSectionProps) => {
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -113,7 +118,7 @@ const HeroSection = ({
 
         {/* Main Title */}
         <h1 className='text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up'>
-          {title}
+          {local === 'ar' ? title.ar : title.en}
         </h1>
 
         {/* Description */}
